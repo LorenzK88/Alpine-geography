@@ -18,11 +18,8 @@ import shapefile
 import geopandas as gpd
 
 #ccrs.PlateCarree()
-from matplotlib import rc
 import matplotlib.pyplot as plt
 
-rc('text', usetex=True)
-rc('font', family='serif')
 
 fig = plt.figure()
 
@@ -60,15 +57,6 @@ ax.add_feature(cfeature.RIVERS.with_scale('10m'), linewidth=0.4)
 #gdf = gpd.read_file('ne_10m_rivers_europe.shp')
 #print(gdf.shape)
 #print(gdf.head())
-
-
-#canyons location
-
-lat, lon = pl.loadtxt('ITALY.txt', unpack=True)
-
-
-ax.scatter(lon,lat, transform=ccrs.PlateCarree(),marker='.', color='#b91414', s=1)
-
 
 
 
